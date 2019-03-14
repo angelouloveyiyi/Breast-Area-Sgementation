@@ -2,7 +2,7 @@ clc
 clear
 
 
-Img = imread('0840.tif');
+Img = imread('trans/0840.tif');
 [N,M] = size(Img);
 
 filter = fspecial('average',101);%fspecial('gaussian', [3,3],100);
