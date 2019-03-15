@@ -11,7 +11,7 @@ We run the U-Nets model under Keras 2.2.2.
 #### Data prepare:
 Run the load_data.py. Chnage the data paths get the train data and test data in npy form.
 #### Training
-Run the Model.py. The net work are training. After training, the model are saved automatically. 
+Run the Model.py. The network are training. After training, the model are saved automatically. 
 #### Testing
 Run the test.py. 
 
