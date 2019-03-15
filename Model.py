@@ -20,8 +20,8 @@ from keras.layers.convolutional import Conv2D, Conv2DTranspose
 from keras.layers.merge import concatenate
 
 img_shape = (256, 128, 1)
-epochs = 1000 #  s
-batch_size = 12
+epochs = 100 #  s
+batch_size = 6
 
 
 x_train = np.load('D:\Frank\Box Sync\GRP_Loew-Doc\Breast Region by DL\\train_image.npy')  # input data
@@ -33,7 +33,7 @@ x_train = np.expand_dims(x_train, axis=3)
 y_train = y_train.astype('float32') / 255. - 0.5       # minmax_normalized
 y_train = np.expand_dims(y_train, axis=3)
 
-dropout = 0.5
+dropout = 0.2
 def build_model(pretrained_weights=None, input_size=img_shape):
     inputs = Input(input_size)
     conv1 = Conv2D(64, 3, activation='relu', padding='same', kernel_initializer='he_normal')(inputs)
